@@ -1,0 +1,560 @@
+/* * * * * *
+ *
+ * Make Post Sell (mps) is a mobile first web application. We make the pages
+ * look great on mobile & only use media queries as needed for bigger displays.
+ *
+ * We use CSS Grid. It's awesome.
+ *
+ * * * * * */
+
+.avoid-wrap {
+    display:inline-block;
+}
+
+body {
+    margin: 0px;
+    font-family: helvetica;
+}
+
+h1 {
+    font-size: 1.75em;
+    margin-top: .4em;
+    margin-bottom: .4em;
+}
+
+label {
+   display: block;
+}
+
+a {
+    text-decoration: none;
+    color: #5871ad;
+}
+
+input {
+    /* keep the input inside the parents box! */
+    box-sizing: border-box;
+}
+
+input[type="text"], input[type="tel"], input[type="password"] {
+    padding: 8px;
+    border-radius: 4px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #CCCCCC;
+}
+
+textarea {
+    /* keep the input inside the parents box! */
+    box-sizing: border-box;
+
+    padding: 8px;
+    border-radius: 4px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #CCCCCC;
+}
+
+section.shop-name-and-description {
+    display: grid;
+}
+
+input.mps-quantity {
+    max-width: 60px;
+}
+
+input.mps-submit {
+    float: right;
+}
+
+textarea.mps-billing-address,
+textarea.mps-shop-description,
+textarea.mps-shop-ribbon-text
+{
+    max-width: 600px;
+    width: 100%;
+    height: 120px;
+    padding: 10px;
+}
+
+textarea.mps-shop-ribbon-text {
+    height: 60px;
+}
+
+input.mps-shop-name,
+input.mps-phone-number,
+input.mps-google-analytics-id, 
+input.mps-stripe-public-api-key, 
+input.mps-stripe-secret-api-key,
+input.mps-shop-ribbon-text-color,
+input.mps-shop-ribbon-color
+{
+    max-width: 600px;
+    width: 100%;
+}
+
+section.product-title-and-description {
+    display: grid;
+}
+
+section.product-left {
+    justify-self: right;
+    text-align: left;
+    max-width: 480px;
+}
+
+section.product-right {
+    justify-self: center;
+    text-align: center;
+}
+
+section.log-in-form {
+    justify-self: right;
+    text-align: center;
+}
+
+section.join-form {
+    justify-self: left;
+    text-align: center;
+}
+
+input.mps-product-title {
+    max-width: 600px;
+    width: 100%;
+}
+
+textarea.mps-product-description {
+    max-width: 600px;
+    width: 100%;
+    height: 120px;
+    padding: 10px;
+}
+
+input.file-input {
+    width: 100%;
+}
+
+div.message-ribbon {
+    padding: 8px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+section.main {
+    /*padding: 14px;*/
+}
+
+/*
+section.grid-nav {
+    grid-column: 1/-1;
+}
+*/
+
+/* mobile first */
+/* the navbar is stacked by default. */
+section.nav {
+    background-color: #F9F9FA;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-columns: max-content;
+    grid-auto-flow: dense;
+    grid-gap: 4px;
+    padding: 4px;
+}
+
+div.message-ribbon {
+    display: none;
+}
+
+section.log-in {
+    text-align: center;
+}
+
+section.search {
+    align-self: center;
+}
+
+form.search {
+    width: 100%;
+}
+
+input.mps-keywords {
+    width: 100%;
+    text-align: center;
+}
+
+section.content {
+    background-color: #ffffff;
+    margin: 4px;
+    padding: 4px;
+}
+
+section.logo{
+    align-self: center;
+}
+
+img.logo {
+    width: 100%;
+}
+
+img.product-cart-thumbnail {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    max-width:44px;
+    max-height:44px;
+    width: auto;
+    height: auto;
+}
+
+img.product-thumbnail {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    max-width:58px;
+    max-height:58px;
+    width: auto;
+    height: auto;
+}
+
+img.product-main {
+    /*
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    */
+    width: 100%;
+}
+
+a.mps-button {
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 4px;
+    min-width: 250px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    margin-top: 4px;
+    margin-bottom: 4px;
+}
+
+a.mps-button-small {
+    min-width: 140px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+a.product-edit-button {
+    background-color: #98b6fa;
+}
+
+a.product-preview-button {
+    background-color: #98b6fa;
+}
+
+a.product-download-button {
+    background-color: #a3c765;
+}
+
+a.product-new-button {
+    background-color: #98b6fa;
+}
+
+a.shop-new-button {
+    background-color: #a3c765;
+}
+
+a.done-button {
+    background-color: #a3c765;
+}
+
+a.log-out-button {
+    background-color: #5871ad;
+}
+
+a.cart-checkout-button {
+    background-color: #a3c765;
+}
+
+a.cart-save-button {
+    background-color: #98b6fa;
+}
+
+a.cart-activate-button {
+    background-color: #5871ad;
+}
+
+a.cart-public-button span.lock {
+   font-size: 24px;
+}
+
+a.cart-public-button {
+    color: #666666;
+    border-color: #666666;
+    border-style: solid;
+    border-width: 1px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+a.cart-delete-button {
+    background-color: #CC6958;
+}
+
+a.user-display-name {
+    margin: 14px;
+    display: inline-block;
+}
+
+a.cart-and-count {
+    margin: 14px;
+    display: inline-block;
+}
+
+section.serp {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-auto-columns: max-content;
+    grid-auto-flow: dense;
+    grid-gap: 14px;
+}
+
+div.serp-item {
+    border-radius: 4px;
+    padding: 8px;
+    grid-column: span 1;
+    grid-row: span 1;
+    /* The new CSS animations are off the hook. */
+    transition: background-color 700ms ease;
+}
+
+div.serp-item:hover {
+    background-color: #F9F9FA;
+}
+
+img.serp-thumbnail {
+    border-radius: 4px;
+    width: 100%;
+}
+
+div.edit-page {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-gap: 20px;
+}
+
+hr {
+  color: #EEEEEE;
+}
+
+section.upload-product-and-preview {
+}
+
+section.upload-thumbnails {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-auto-columns: max-content;
+    grid-auto-flow: dense;
+    grid-gap: 14px;
+}
+
+section.call-to-action {
+    text-align: right;
+    padding: 14px;
+    display: block;
+}
+
+section.one-column, section.one-column-thin {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+section.one-column-thin {
+  max-width: 400px;
+}
+
+section.user-settings {
+    justify-self: right;
+}
+
+section.button-panel {
+    justify-self: left;
+    text-align: center;
+}
+
+section.existing-cards {
+    justify-self: right;
+    text-align: left;
+    margin-bottom: 40px;
+}
+
+section.new-card {
+    justify-self: left;
+    text-align: right;
+    margin-bottom: 40px;
+}
+
+div.card-details {
+    max-width: 240px;
+    margin:auto;
+}
+
+div.card-are-you-sure-buttons {
+    max-width: 300px;
+    margin:auto;
+}
+
+section.cart-left {
+    margin-bottom: 10px;
+    grid-column: 1 / span 3;
+}
+
+section.cart-left-grid {
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 4fr 1fr;
+}
+
+section.cart-right {
+    text-align: center;
+    margin-bottom: 10px;
+    grid-column: 4;
+}
+
+span.cart-left-item-title {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+section.checkout-left {
+    justify-self: right;
+    text-align: left;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+section.checkout-right {
+    justify-self: left;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#email2_input {
+    display: None;
+}
+
+.StripeElement {
+    min-width: 246px;
+    width: 100%;
+    border-color: #bbbbbb;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 2px;
+    background-color: white;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+.opacity-60 {
+    opacity: .60;
+}
+
+.well, .well2 {
+    background-color: #F9F9FA;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+@media (max-width: 800px) {
+    /* the two-column is stacked by default. */
+    section.two-column {
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* the cart-grid is stacked by default. */
+    section.cart-grid {
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+@media (min-width: 800px) {
+    /* if we have room, break into 2 columns */
+    section.two-column {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-auto-columns: max-content;
+        grid-auto-flow: dense;
+        grid-gap: 30px;
+        padding: 14px;
+        justify-items: center;
+    }
+
+    /* if we have room, break into 2 columns */
+    section.cart-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-gap: 30px;
+        padding: 14px;
+        justify-items: center;
+    }
+
+    img.product-cart-thumbnail {
+        max-width:104px;
+        max-height:104px;
+    }
+
+    section.content {
+        background-color: #ffffff;
+        margin: 4px;
+        padding: 14px;
+    }
+
+    input.mps-keywords {
+        text-align: left;
+    }
+
+    section.nav {
+        /* if we have room, break navbar into 3 columns */
+        grid-template-columns: minmax(200px, 300px) 3fr 1fr;
+        grid-gap: 30px;
+        padding: 14px;
+    }
+
+    div.message-ribbon {
+        display: block;
+    }
+
+    section.log-in {
+        text-align: right;
+    }
+    .well, .well2 {
+        padding: 10px;
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+    .well2 {
+        padding: 10px;
+    }
+}
+
+@media (min-width: 1200px) {
+    img.product-cart-thumbnail {
+        max-width:184px;
+        max-height:184px;
+    }
+    .well, .well2 {
+        padding: 20px;
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+    .well2 {
+        padding: 20px;
+    }
+}
