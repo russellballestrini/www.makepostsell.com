@@ -28,7 +28,7 @@ label {
 
 a {
     text-decoration: none;
-    color: #5871ad;
+    color: #5f6368
 }
 
 input {
@@ -238,12 +238,6 @@ a.mps-button {
     margin-bottom: 4px;
 }
 
-a.mps-button-small {
-    min-width: 140px;
-    padding-left: 10px;
-    padding-right: 10px;
-}
-
 a.product-edit-button {
     background-color: #98b6fa;
 }
@@ -299,6 +293,15 @@ a.cart-public-button {
 
 a.cart-delete-button {
     background-color: #CC6958;
+}
+
+a.shop-switch-button {
+    color: #666666;
+    border-color: #666666;
+    border-style: solid;
+    border-width: 1px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 a.user-display-name {
@@ -358,10 +361,18 @@ section.upload-thumbnails {
     grid-gap: 14px;
 }
 
-section.call-to-action {
-    text-align: right;
+section.windows-95-task-bar {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 4px;
+}
+
+section.windows-95-start-button {
     padding: 14px;
-    display: block;
+}
+
+section.call-to-action {
+    padding: 14px;
 }
 
 section.one-column, section.one-column-thin {
@@ -468,6 +479,60 @@ section.checkout-right {
     padding: 10px;
 }
 
+
+/* markup editor css */
+
+section.markup-settings {
+    width: 100%;
+    min-height: 280px;
+}
+
+textarea.markup-editor-textarea {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 100%;
+    height: 400px;
+}
+
+.markup-editor-submit {
+  float: right;
+}
+
+.markup-preview-div {
+    width: 100%;
+}
+
+.markup-preview-div {
+  border-top: 1px dotted #bbbbbb;
+  border-bottom: 1px dotted #bbbbbb;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  margin-right: 5px;
+  margin-left: 5px;
+  line-height: 1.6;
+}
+
+.markup-preview-div p {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  line-height: 1.75;
+}
+
+.preview-raw-markup {
+  display: block;
+  white-space: pre-wrap;
+  background-color: unset;
+  border-radius: unset;
+  border: unset;
+  border-width: 0px;
+
+  margin-top: 19px;
+  margin-bottom: 10px;
+}
+
 @media (max-width: 800px) {
     /* the two-column is stacked by default. */
     section.two-column {
@@ -482,6 +547,16 @@ section.checkout-right {
         margin-left: auto;
         margin-right: auto;
     }
+
+    /* markup-editor is stacked by default. */
+    div.markup-editor {
+        display: grid;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    section.markup-rendered {
+        display: none;
+    }
 }
 
 @media (min-width: 800px) {
@@ -494,6 +569,35 @@ section.checkout-right {
         grid-gap: 30px;
         padding: 14px;
         justify-items: center;
+    }
+
+    /* if we have room, break markup-editor into 2 columns */
+    div.markup-editor {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-auto-columns: max-content;
+        grid-auto-flow: dense;
+        grid-gap: 30px;
+        padding: 14px;
+        justify-items: center;
+    }
+    section.markup-settings {
+        min-height: 400px;
+    }
+
+    /* really make the button small now that we have room.  */
+    a.mps-button-small {
+        min-width: 140px;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+    section.windows-95-task-bar {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    section.call-to-action {
+        text-align: right;
     }
 
     /* if we have room, break into 2 columns */
