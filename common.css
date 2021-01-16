@@ -195,7 +195,8 @@ section.logo{
 }
 
 img.logo {
-    width: 100%;
+    width: 90%;
+    padding: 5%;
 }
 
 img.product-cart-thumbnail {
